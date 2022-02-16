@@ -1,9 +1,15 @@
 # cygne-bot
+
 # Description
+
 A simple Discord bot in Node.js that retrieves data from Youtube using `ytdl-core`.
+
 # Install instructions
-First, install the necessary modules.
+
+First, install the necessary dependencies.
+
 ```
 npm ci
 ```
-Make sure to install Prettier and ESLint. Then, you're good to go!
+
+Use `npx` to run the binaries for JSDoc, Prettier, or ESLint e.g. `npx JSDoc`
