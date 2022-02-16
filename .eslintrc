@@ -1,1 +1,34 @@
-
+{
+    "extends": [
+        "eslint:recommended",
+        "prettier"
+    ],
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType" : "script",
+        "ecmaFeatures": {
+            "globalReturn": false,
+            "impliedStrict": true,
+            "jsx": false
+        }
+    },
+    "rules": {
+        "array-callback-return": "warn",
+        "no-constructor-return": "warn",
+        "no-dupe-else-if": "warn",
+        "no-fallthrough": "warn",
+        "no-loss-of-precision": "warn",
+        "no-promise-executor-return": "error",
+        "no-unmodified-loop-condition": "warn",
+        "no-unsafe-negation": "warn",
+        "no-unused-vars": "warn",
+        "no-use-before-define": ["error", "nofunc"],
+        "require-atomic-updates": "warn",
+        "no-empty": "warn"
+    },
+    "noInlineConfig": true
+}
