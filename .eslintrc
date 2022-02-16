@@ -5,11 +5,11 @@
     ],
     "env": {
         "node": true,
-        "es6": true
+        "es2022": true
     },
     "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType" : "script",
+        "ecmaVersion": "latest",
+        "sourceType" : "module",
         "ecmaFeatures": {
             "globalReturn": false,
             "impliedStrict": true,
