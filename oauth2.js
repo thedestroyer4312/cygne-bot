@@ -1,4 +1,4 @@
-import { ClientRequest } from "http";
+import http from "http";
 import url from "url";
 
 import {
@@ -16,7 +16,7 @@ import { httpsRequest } from "./util.js";
  * Exchanges given authorization code with Discord token endpoint
  * @function exchangeCode
  * @param {string} code
- * @return {Promise<ClientRequest>} Response from Discord token URL
+ * @return {Promise<http.ClientRequest>} Response from Discord token URL
  */
 export function exchangeCode(code) {
   // Send POST to Discord token URL containing code

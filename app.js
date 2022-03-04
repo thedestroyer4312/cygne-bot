@@ -17,7 +17,7 @@ export const REDIRECT_URI_BASE = process.env.REDIRECT_URI_BASE || `http://localh
 export const REDIRECT_URI_ENDPOINT = "/api/auth/discord/redirect";
 
 // Discord URLS
-export const DISCORD_URL_BASE = "https://discord.com";
+export const DISCORD_URL_BASE = "discord.com";
 export const DISCORD_BASE_AUTHORIZATION_ENDPOINT = "/api/oauth2/authorize";
 export const DISCORD_TOKEN_ENDPOINT = "/api/oauth2/token";
 export const DISCORD_TOKEN_REVOCATION_ENDPOINT = "/api/oauth2/token/revoke";
@@ -27,8 +27,6 @@ export const DISCORD_TOKEN_REVOCATION_ENDPOINT = "/api/oauth2/token/revoke";
  * and attempts to exchange for access token/refresh token pair
  */
 app.get(REDIRECT_URI_ENDPOINT, (req, res) => {
-  console.log(req);
-
   // Retrieve code from request
 
   const { code } = req.query;
@@ -37,8 +35,8 @@ app.get(REDIRECT_URI_ENDPOINT, (req, res) => {
   // Otherwise, bad request - 400
   if (code) {
     exchangeCode(code.toString())
-      .then((data) => {
-        console.log(data);
+      .then((body) => {
+        console.log(body);
         res.sendStatus(200);
       })
       .catch((err) => {

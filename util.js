@@ -1,10 +1,11 @@
+import http from "http";
 import https from "https";
 
 /**
  * @function httpsRequest
- * @param {RequestOptions} params
+ * @param {http.RequestOptions} params
  * @param {string} postData
- * @return {Promise<ClientRequest>} Promisifed request
+ * @return {Promise<http.ClientRequest>} Promisifed request
  */
 export function httpsRequest(params, postData = null) {
   return new Promise((resolve, reject) => {
