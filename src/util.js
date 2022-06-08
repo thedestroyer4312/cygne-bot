@@ -12,7 +12,7 @@ export function httpsRequest(params, postData = null) {
     const req = https.request(params, (res) => {
       // Reject on bad status
       if (res.statusCode < 200 || res.statusCode >= 300) {
-        return reject(new Error(`statusCode=${res.statusCode}`));
+        reject(new Error(`statusCode=${res.statusCode}`));
       }
 
       // Accumulate data (res is a readable stream)

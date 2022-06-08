@@ -8,6 +8,10 @@
   },
   "contributors": [],
   "private": true,
+  "scripts":{
+    "start": "node ./app.js",
+    "start:dev": "node ./app.js"
+  },
   "devDependencies": {
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",
